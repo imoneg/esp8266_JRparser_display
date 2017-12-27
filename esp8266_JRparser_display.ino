@@ -14,6 +14,7 @@
 #include <Adafruit_NeoPixel.h>
 #include <ESP8266HTTPClient.h>
 #include <Ticker.h>
+#include "password.h"
 
 #define USE_SERIAL Serial
 #define BUFF_SIZE 2048
@@ -64,7 +65,7 @@ void setup() {
         delay(1000);
     }
 
-    WiFiMulti.addAP("7308", "mokemoke");
+    WiFiMulti.addAP("7308", wifi_password);
 
 }
 void parseCSV(char* str,int size){
